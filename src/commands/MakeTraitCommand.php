@@ -51,6 +51,7 @@ class MakeTraitCommand extends Command
     /**
      * Execute the console command.
      *
+     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      * @return void
      */
     public function handle(): void
@@ -65,6 +66,7 @@ class MakeTraitCommand extends Command
      * Write the trait in the application files.
      *
      * @param  array $arguments The command arguments
+     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      * @return void
      */
     public function writeTrait(array $arguments): void
