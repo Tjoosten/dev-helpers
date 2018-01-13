@@ -3,14 +3,13 @@
 namespace Misfits\Helpers\Development\Creators;
 
 use Illuminate\Filesystem\Filesystem;
-use Illuminate\Support\Facades\Config;
 
 /**
  * Class TraitCreator
  *
  * @package Misfits\Helpers\Development\Creators
  */
-class TraitCreator
+class TraitCreator extends SharedCreator
 {
     /**
      * @var Filesystem $filesystem
@@ -90,7 +89,7 @@ class TraitCreator
      */
     public function getDirectory(): string
     {
-        return Config::get('dev-helpers.paths.trait');
+        return config('dev-helpers.paths.trait');
     }
 
     /**
@@ -146,18 +145,6 @@ class TraitCreator
     }
 
     /**
-     * Get the directory path for the stubs.
-     *
-     * @return string
-     */
-    protected function getStubPath(): string
-    {
-        $path = __DIR__ . '/../resources/stubs/';
-
-        return $path;
-    }
-
-    /**
      * Get the data for the attrib. population.
      *
      * @return array
@@ -166,7 +153,7 @@ class TraitCreator
     {
         return [
             'trait_class'     => ucfirst($this->getTrait()),
-            'trait_namespace' => Config::get('dev-helpers.namespaces.trait'),
+            'trait_namespace' => config('dev-helpers.namespaces.trait'),
         ];
     }
 }
