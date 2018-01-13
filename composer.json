@@ -13,7 +13,8 @@
     }
   ],
   "require": {
-    "php": "^7.1"
+    "php": "^7.1",
+    "illuminate/support": "^5.5"
   },
   "require-dev": {
     "larapack/dd": "^1.0",
@@ -38,7 +39,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Misfits\\Helpers\\Development\\CommandServiceProvider"
+        "Misfits\\Helpers\\Development\\HelperServiceProvider"
       ]
     }
   }
