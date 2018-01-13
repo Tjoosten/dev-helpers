@@ -100,7 +100,9 @@ class TraitCreator extends SharedCreator
      */
     protected function createTrait(): int
     {
-        $result = $this->filesystem->put($this->getPath(), $this->populateStub());
+        $result = $this->filesystem->put(
+            $this->getPath(), $this->populateStub($this->getPopulateData(), $this->getStub())
+        );
 
         return $result;
     }
@@ -113,24 +115,6 @@ class TraitCreator extends SharedCreator
     protected function getPath(): string
     {
         return $this->getDirectory() . DIRECTORY_SEPARATOR . $this->getTrait() . '.php';
-    }
-
-    /**
-     * Populate the stub with the needed data.
-     *
-     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
-     * @return mixed
-     */
-    protected function populateStub()
-    {
-        $stubData = $this->getPopulateData();   // Get the data for the population
-        $stubPath = $this->getStub();           // Get the path to the trait stub
-
-        foreach ($stubData as $search => $replace) {                // Loop through the populate data.
-            $stubPath = str_replace($search, $replace, $stubPath);  // Populate the stub
-        }
-
-        return $stubPath; // Return the filled in stub.
     }
 
     /**
