@@ -7,7 +7,7 @@ namespace trait_namespace;
  *
  * @package trait_namespace
  */
-class trait_class 
+trait trait_class
 {
 	// 
 }
