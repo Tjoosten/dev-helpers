@@ -27,7 +27,7 @@ class HelperServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/config/dev-helpers' => config_path('dev-helpers.php'),
+                __DIR__ . '/config/dev-helpers.php' => config_path('dev-helpers.php'),
             ], 'config');
         }
     }
@@ -39,6 +39,6 @@ class HelperServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->mergeConfigFrom(__DIR__ . '/config/dev-helpers.php', 'dev-helpers');
     }
 }
