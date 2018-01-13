@@ -1,6 +1,7 @@
 <?php
 
 namespace Misfits\Helpers\Development\Creators;
+
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Facades\Config;
 
