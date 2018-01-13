@@ -1,0 +1,13 @@
+<?php 
+
+namespace trait_namespace;
+
+/**
+ * Class trait_class
+ *
+ * @package trait_namespace
+ */
+class trait_class 
+{
+	// 
+}
