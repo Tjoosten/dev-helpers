@@ -33,7 +33,7 @@ class HelperServiceProvider extends ServiceProvider
     }
 
     /**
-     * Register the applicatiàon services.
+     * Register the application services.
      *
      * @return void
      */
