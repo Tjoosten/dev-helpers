@@ -1,0 +1,45 @@
+{
+  "name": "misfits/dev-helpers",
+  "description": "Small package with development helpers for Laravel",
+  "keywords": ["Misfits", "Laravel", "Helpers", "Make commands"],
+  "homepage:": "https://github.com/Misfits-BE",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Tim Joosten",
+      "email": "topairy@gmail.com",
+      "homepage": "https://github.com/Tjoosten",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.1"
+  },
+  "require-dev": {
+    "larapack/dd": "^1.0",
+    "phpunit/phpunit": "^6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Misfits\\Helpers\\Development\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Misfits\\Helpers\\Development\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Misfits\\Helpers\\Development\\CommandServiceProvider"
+      ]
+    }
+  }
+}
