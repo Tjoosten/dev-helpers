@@ -45,6 +45,8 @@ class HelperServiceProvider extends ServiceProvider
     {
         $this->registerBindings();
         $this->registerMakeTraitCommand();
+
+        $this->commands(['command.trait.create']);
         $this->mergeConfigFrom(__DIR__ . '/config/dev-helpers.php', 'dev-helpers');
     }
 
@@ -86,7 +88,7 @@ class HelperServiceProvider extends ServiceProvider
      *
      * @return array
      */
-    public function provider(): array
+    public function provides(): array
     {
         return ['command.trait.create'];
     }
