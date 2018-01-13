@@ -61,7 +61,7 @@ class TraitCreator
      */
     public function create(string $trait): int
     {
-        $this->setTrait($trait);      // Set the trait
+        $this->setTrait($trait);     // Set the trait
         $this->createDirectory();    // Create the folder directory
 
         return $this->createTrait(); // Return result

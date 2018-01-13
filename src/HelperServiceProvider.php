@@ -5,6 +5,7 @@ namespace Misfits\Helpers\Development;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Composer;
 use Illuminate\Support\ServiceProvider;
+use Misfits\Helpers\Development\Commands\MakeTraitCommand;
 use Misfits\Helpers\Development\Creators\TraitCreator;
 
 /**
