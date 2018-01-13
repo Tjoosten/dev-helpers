@@ -38,7 +38,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Misfits\\Helpers\\Development\\CommandServiceProvider"
+        "Misfits\\Helpers\\Development\\HelperServiceProvider"
       ]
     }
   }
